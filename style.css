@@ -9,6 +9,9 @@ body {
     height: 100%;
     background-color: #111;
 }
+body{
+    overflow-x: hidden;
+}
 #box{
     height: 300px;
     width: 300px;
@@ -17,24 +20,22 @@ body {
 #page1{
     height: 100%;
     width: 100%;
-    background-color: wheat;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background-color: black;
+
 }
 #page2{
     height: 100%;
     width: 100%;
     background-color: lightseagreen;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 #page3{
     height: 100%;
     width: 100%;
     background-color: royalblue;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+}
+
+#page2 h1{
+    font-size: 40vw;
+    font-weight: 600;
+    text-transform: uppercase;
 }
