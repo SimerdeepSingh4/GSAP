@@ -1,23 +1,30 @@
-let initialPath =`M 10 100 Q 500 100 990 100`
+let main = document.querySelector("#main")
+let cursor = document.querySelector("#cursor")
+let imageDiv = document.querySelector("#image")
 
-let finalPath =`M 10 100 Q 500 100 990 100`;
 
-let string = document.querySelector('#string')
 
-string.addEventListener('mousemove',(dets)=>{
-    path = `M 10 100 Q ${dets.x} ${dets.y} 990 100`
-
-    gsap.to("svg path",{
-        attr:{d:path},
-        duration:0.2,
-        ease:"power3.out"
+main.addEventListener("mousemove",(dets)=>{
+    gsap.to(cursor,{
+        x:dets.x,
+        y:dets.y,
+        duration:0.5,
+        ease:"back.out"
     })
 })
 
-string.addEventListener('mouseleave',()=>{
-    gsap.to("svg path",{
-        attr:{d:finalPath},
-        duration:1,
-        ease:"elastic.out(1,0.2)"
+imageDiv.addEventListener("mouseenter",()=>{
+    cursor.innerHTML = "View More"
+    gsap.to(cursor,{
+        scale:4,
+        backgroundColor:"#ffffff7a"
+    })
+})
+imageDiv.addEventListener("mouseleave",()=>{
+    cursor.innerHTML = ""
+    gsap.to(cursor,{
+        scale:1,
+        backgroundColor:"#fff"
+
     })
 })
