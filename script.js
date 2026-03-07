@@ -1,30 +1,20 @@
-let main = document.querySelector("#main")
-let cursor = document.querySelector("#cursor")
-let imageDiv = document.querySelector("#image")
+let body = document.querySelector("body")
+let marque = document.querySelectorAll("#marque")
+let arrow = document.querySelectorAll(".arrow")
 
+const marqueeTween = gsap.to(marque, {
+  xPercent: -100,
+  duration: 3,
+  repeat: -1,
+  ease: "none",
+});
 
-
-main.addEventListener("mousemove",(dets)=>{
-    gsap.to(cursor,{
-        x:dets.x,
-        y:dets.y,
-        duration:0.5,
-        ease:"back.out"
-    })
+const arrowMove = gsap.to(".arrow",{
+  rotate:180,
 })
 
-imageDiv.addEventListener("mouseenter",()=>{
-    cursor.innerHTML = "View More"
-    gsap.to(cursor,{
-        scale:4,
-        backgroundColor:"#ffffff7a"
-    })
-})
-imageDiv.addEventListener("mouseleave",()=>{
-    cursor.innerHTML = ""
-    gsap.to(cursor,{
-        scale:1,
-        backgroundColor:"#fff"
-
-    })
-})
+window.addEventListener("wheel", (e) => {
+  const isDown = e.deltaY > 0;
+  marqueeTween.timeScale(isDown ? 1 : -1);
+  arrowMove.timeScale(isDown? 1: -1)
+});
