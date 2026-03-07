@@ -24,35 +24,55 @@ body{
     background-color: #111;
 }
 #page1{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-#page1, #page2, #page3{
-    height: 100vh;
     width: 100%;
-}
-
-#move{
-    background-color: #D8FF04;
+    height: 100%;
     display: flex;
+    align-items: center;
     overflow: hidden;
-
+    justify-content: center;
 }
-#marque{
+#move{
+    display: flex;
+    height: 80%;
+    width: fit-content;
+    background-color: #D8FF04;
+    overflow: hidden;
+    flex-direction: column;
+}
+#move2{
+    display: flex;
+    height: 80%;
+    width: fit-content;
+    background-color: red;
+    overflow: hidden;
+    flex-direction: column;
+    
+}
+.marque{
     flex-shrink: 0;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 3vw;
-    padding: 0 1.5vw;
 }
 
-#marque h1{
-    font-size: 4vw;
-    font-family:china-light;
+
+
+.marque img{
+    width: 250px;
+    height:300px;
+    object-fit: cover;
 }
-#marque h2{
-    font-size: 4vw;
-    font-family:china-light;
+.marque2{
+    transform: translateY(-100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.marque2 img{
+    width: 250px;
+    height:300px;
+    object-fit: cover;
 }

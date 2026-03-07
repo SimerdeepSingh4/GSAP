@@ -1,20 +1,22 @@
 let body = document.querySelector("body")
-let marque = document.querySelectorAll("#marque")
-let arrow = document.querySelectorAll(".arrow")
+let marque = document.querySelectorAll("#move .marque")
+let marque2 = document.querySelectorAll("#move2 .marque2")
 
-const marqueeTween = gsap.to(marque, {
-  xPercent: -100,
+let direction = 1; // 
+let yPercent = 0;
+const speed = 0.5;
+gsap.to(marque, {
+  yPercent: -100,
   duration: 3,
   repeat: -1,
   ease: "none",
 });
 
-const arrowMove = gsap.to(".arrow",{
-  rotate:180,
-})
 
-window.addEventListener("wheel", (e) => {
-  const isDown = e.deltaY > 0;
-  marqueeTween.timeScale(isDown ? 1 : -1);
-  arrowMove.timeScale(isDown? 1: -1)
+gsap.to(marque2, {
+  repeat: -1,
+  yPercent: 100,
+  duration: 3,
+  ease: "none",
 });
+
