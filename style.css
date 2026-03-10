@@ -22,26 +22,36 @@ body {
 }
 body{
     background-color: #111;
+    overflow: hidden;
 }
 #page1{
-    width: 100%;
-    height: 100%;
+    min-height: 100%;
     display: flex;
     align-items: center;
     overflow: hidden;
     justify-content: center;
 }
-#move{
+
+.animation{
+    display: flex;
+    overflow: hidden;
+    gap: 1rem;
+    padding: 1rem;
+}
+.move{
     display: flex;
     height: 80%;
     width: fit-content;
+    gap: 1rem;
+    padding-bottom: 1rem;
     background-color: #D8FF04;
     overflow: hidden;
     flex-direction: column;
+    
 }
-#move2{
+.move2{
     display: flex;
-    height: 80%;
+    height: max-content;
     width: fit-content;
     background-color: red;
     overflow: hidden;
@@ -61,6 +71,7 @@ body{
     width: 250px;
     height:300px;
     object-fit: cover;
+    aspect-ratio: 2/3;
 }
 .marque2{
     transform: translateY(-100%);
@@ -68,8 +79,6 @@ body{
     align-items: center;
     justify-content: center;
 }
-
-
 
 .marque2 img{
     width: 250px;
