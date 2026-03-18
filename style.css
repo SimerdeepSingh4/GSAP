@@ -1,19 +1,8 @@
-@font-face {
-    font-family: china-light;
-    src: url(./NeueMachina-Light.otf);
-}
-@font-face {
-    font-family: china-reg;
-    src: url(./NeueMachina-Regular.otf);
-}
-@font-face {
-    font-family: china-bold;
-    src: url(./NeueMachina-Ultrabold.otf);
-}
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 html,
 body {
@@ -21,67 +10,60 @@ body {
     height: 100%;
 }
 body{
-    background-color: #111;
-    overflow: hidden;
+    overflow-x: hidden;
 }
-#page1{
-    min-height: 100%;
+#main{
+    height: 100%;
+    width: 100%;
+    background-image: url("https://images.pexels.com/photos/531756/pexels-photo-531756.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#nav{
     display: flex;
     align-items: center;
-    overflow: hidden;
-    justify-content: center;
+    justify-content: space-between;
+    padding: 40px 50px;
+    color: #fff;
 }
 
-.animation{
-    display: flex;
-    overflow: hidden;
-    gap: 1rem;
-    padding: 1rem;
-}
-.move{
-    display: flex;
-    height: 80%;
-    width: fit-content;
-    gap: 1rem;
-    padding-bottom: 1rem;
-    background-color: #D8FF04;
-    overflow: hidden;
-    flex-direction: column;
-    
-}
-.move2{
-    display: flex;
-    height: max-content;
-    width: fit-content;
-    background-color: red;
-    overflow: hidden;
-    flex-direction: column;
-    
-}
-.marque{
-    flex-shrink: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+#nav h2{
+    font-size: 30px;
 }
 
-
-
-.marque img{
-    width: 250px;
-    height:300px;
-    object-fit: cover;
-    aspect-ratio: 2/3;
-}
-.marque2{
-    transform: translateY(-100%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+#nav i{
+    font-size: 30px;
+    font-weight: 800;
+    cursor: pointer;
 }
 
-.marque2 img{
-    width: 250px;
-    height:300px;
-    object-fit: cover;
+#full{
+    height: 100%;
+    width: 40%;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.292);
+    top: 0;
+    right: -40%;
+    backdrop-filter: blur(10px);
+    padding: 150px 60px;
+}
+
+#full h4{
+    font-size: 50px;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+#full i{
+    position: absolute;
+    top: 5%;
+    right: 10%;
+    background-color: #fff;
+    border-radius: 50%;
+    padding: 5px;
+    font-weight: 800;
+    font-size: 20px;
+    cursor: pointer;
 }
