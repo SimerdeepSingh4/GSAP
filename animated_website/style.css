@@ -1,0 +1,112 @@
+@font-face {
+    font-family: japan;
+    src: url(./NeueMachina-Light.otf);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+section {
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px 100px;
+}
+
+nav h1 {
+    font-size: 40px;
+
+}
+
+nav h1 i {
+    rotate: 45deg;
+    display: inline-block;
+    font-size: 55px;
+
+}
+
+nav h4 {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+nav button {
+    padding: 10px 20px;
+    font-size: 20px;
+    border-radius: 10px;
+    font-weight: 600;
+    border: 1px solid #000;
+}
+
+.part2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+}
+
+.center {
+    padding: 70px 100px;
+    height: 80%;
+    width: 100%;
+    display: flex;
+}
+
+.center-part1 {
+    height: 100%;
+    width:40%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+
+}
+
+
+
+.center-part1 h1{
+    line-height: 1.2;
+    font-size: 60px;
+    font-family: japan;
+}
+
+.center-part1 p{
+    font-size: 20px;
+    width: 98%;
+}
+
+.center-part1 button{
+    background-color: black;
+    color: #fff;
+    border-radius: 10px;
+    padding: 22px 30px;
+    font-size: 20px;
+    font-weight: 600;
+    border: none;
+    width: fit-content;
+}
+.center-part2 {
+    height: 100%;
+    width: 60%;
+    position: relative;
+
+}
+.center-part2 img{
+    height: 100%;
+    position: absolute;
+    right: 0;
+}
